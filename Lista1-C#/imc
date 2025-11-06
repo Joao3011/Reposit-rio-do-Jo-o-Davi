@@ -1,0 +1,15 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        Console.WriteLine("Altura (metros):");
+        double altura = double.Parse(Console.ReadLine(), ci);
+        Console.WriteLine("Peso (kg):");
+        double peso = double.Parse(Console.ReadLine(), ci);
+
+        double imc = peso / (altura * altura);
+        Console.WriteLine("IMC: " + imc.ToString("F2", ci));
+    }
+}
