@@ -1,0 +1,14 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        Console.WriteLine("Valor da glicose (mg/dl):");
+        double glicose = double.Parse(Console.ReadLine(), ci);
+
+        if (glicose <= 100.0) Console.WriteLine("Classificação: Normal");
+        else if (glicose <= 140.0) Console.WriteLine("Classificação: Elevado");
+        else Console.WriteLine("Classificação: Diabetes");
+    }
+}
