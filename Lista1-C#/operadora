@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        const double plano = 50.0;
+        const int franquia = 100;
+        const double custoMinExcedente = 2.0;
+
+        Console.WriteLine("Quantidade de minutos consumidos:");
+        int minutos = int.Parse(Console.ReadLine());
+
+        double total = plano;
+        if (minutos > franquia) total += (minutos - franquia) * custoMinExcedente;
+
+        Console.WriteLine("Valor a pagar: R$ " + total.ToString("F2", ci));
+    }
+}
