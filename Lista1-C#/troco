@@ -1,0 +1,20 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        Console.WriteLine("Preço unitário do produto:");
+        double preco = double.Parse(Console.ReadLine(), ci);
+        Console.WriteLine("Quantidade comprada:");
+        int quantidade = int.Parse(Console.ReadLine());
+        Console.WriteLine("Valor pago pelo cliente:");
+        double pago = double.Parse(Console.ReadLine(), ci);
+
+        double total = preco * quantidade;
+        double troco = pago - total;
+
+        Console.WriteLine("Total a pagar: " + total.ToString("F2", ci));
+        Console.WriteLine("Troco: " + troco.ToString("F2", ci));
+    }
+}
