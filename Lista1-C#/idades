@@ -1,0 +1,21 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        Console.WriteLine("Nome da primeira pessoa:");
+        string nome1 = Console.ReadLine();
+        Console.WriteLine("Idade da primeira pessoa (anos):");
+        double idade1 = double.Parse(Console.ReadLine(), ci);
+
+        Console.WriteLine("Nome da segunda pessoa:");
+        string nome2 = Console.ReadLine();
+        Console.WriteLine("Idade da segunda pessoa (anos):");
+        double idade2 = double.Parse(Console.ReadLine(), ci);
+
+        double media = (idade1 + idade2) / 2.0;
+        Console.WriteLine($"Pessoas: {nome1} e {nome2}");
+        Console.WriteLine("Idade média: " + media.ToString("F1", ci));
+    }
+}
