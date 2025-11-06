@@ -1,0 +1,20 @@
+using System;
+using System.Globalization;
+
+class Program {
+    static void Main() {
+        var ci = CultureInfo.InvariantCulture;
+        Console.WriteLine("Largura do terreno (1 casa decimal):");
+        double largura = double.Parse(Console.ReadLine(), ci);
+        Console.WriteLine("Comprimento do terreno (1 casa decimal):");
+        double comprimento = double.Parse(Console.ReadLine(), ci);
+        Console.WriteLine("Valor do metro quadrado (2 casas decimais):");
+        double valorM2 = double.Parse(Console.ReadLine(), ci);
+
+        double area = largura * comprimento;
+        double preco = area * valorM2;
+
+        Console.WriteLine("Área do terreno: " + area.ToString("F2", ci));
+        Console.WriteLine("Preço do terreno: " + preco.ToString("F2", ci));
+    }
+}
